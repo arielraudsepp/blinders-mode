@@ -1,0 +1,28 @@
+* blinders-mode
+
+=blinders-mode= is a minor mode to limit the amount of lines displayed on a buffer. It works similarly to a reading guide, which is a plastic strip with the see-through strip placed over the line you want to read. This can help with a various reading problems by reducing the amount of visual information. I created it after having a concussion to help with headaches.
+
+** Installation
+You can install =blinders-mode= from source
+#+BEGIN_SRC shell
+    cd /path/for/elisp-packages
+    git clone https://github.com/arielraudsepp/blinders-mode
+#+END_SRC
+
+and then add to your load path and you're all set!
+#+BEGIN_SRC emacs-lisp
+    (add-to-list 'load-path' "path/to/blinders-mode")
+    (add-hook 'prog-mode-hook 'blinders-mode)
+#+END_SRC
+
+Or,
+#+BEGIN_SRC emacs-lisp
+(use-package blinders-mode
+ :straight (:host github :repo "arielraudsepp/blinders-mode"))
+#+END_SRC
+
+If you're using Doom Emacs, add the following to packages.el
+#+BEGIN_SRC emacs-lisp
+    (package! blinders-mode
+      :recipe (:host github :repo "arielraudsepp/blinders-mode"))
+#+END_SRC
